@@ -9,11 +9,14 @@
 #import "OuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "SpaceObject.h"
+#import "SpaceImageViewController.h"
+#import "SpaceDataViewController.h"
 
 @implementation OuterSpaceTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -63,10 +66,10 @@
 //    NSString *blueString = [myDictionary objectForKey:@"ocean color"];
 //    NSLog(@"%@", blueString);
     
-    NSNumber *myNumber = [NSNumber numberWithInt:5];
+    /*NSNumber *myNumber = [NSNumber numberWithInt:5];
     NSLog(@"%@", myNumber);
     NSNumber *floatNumber = [NSNumber numberWithFloat:3.14];
-    NSLog(@"%@", floatNumber);
+    NSLog(@"%@", floatNumber);*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,12 +82,18 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
+    if ([self.addedSpaceObjects count]) {
+        return 2;
+    }
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if (section == 1) {
+        return [self.addedSpaceObjects count];
+    }
     return [self.planets count];
 }
 
@@ -95,11 +104,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    SpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
-    cell.textLabel.text = planet.name;
-    cell.detailTextLabel.text = planet.nickname;
-    cell.imageView.image = planet.spaceImage;
+    if (indexPath.section == 1) {
+        
+    }
+    else {
     
+        SpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
+    }
+    
+    // Customize appearence
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
@@ -111,6 +127,29 @@
     }*/
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //NSLog(@"%@", sender);
+    if ([sender isKindOfClass:[UITableViewCell class]] && [segue.destinationViewController isKindOfClass:[SpaceImageViewController class]]) {
+        SpaceImageViewController *nextViewController = segue.destinationViewController;
+        NSIndexPath *path = [self.tableView indexPathForCell:sender];
+        SpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
+        nextViewController.spaceObject = selectedObject;
+    }
+    if ([sender isKindOfClass:[NSIndexPath class]] && [segue.destinationViewController isKindOfClass:[SpaceDataViewController class]]) {
+        SpaceDataViewController *targetViewController = segue.destinationViewController;
+        NSIndexPath *path = sender;
+        SpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
+        targetViewController.spaceObject = selectedObject;
+    }
+}
+
+#pragma mark UITableView Delegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@"accessory button is working properly %li", indexPath.row);
+    [self performSegueWithIdentifier:@"show to space data" sender:indexPath];
 }
 
 

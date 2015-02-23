@@ -15,6 +15,12 @@
 		86681A981A6D3E46009FBC31 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86681A971A6D3E46009FBC31 /* Out_of_this_WorldTests.m */; };
 		86681AA31A6D3F7A009FBC31 /* OuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86681AA21A6D3F7A009FBC31 /* OuterSpaceTableViewController.m */; };
 		8E0BAFBA1A8A23FF006457BB /* SpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BAFB91A8A23FF006457BB /* SpaceImageViewController.m */; };
+		8E0BB0621A8D2AE0006457BB /* SpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0BB0611A8D2AE0006457BB /* SpaceDataViewController.m */; };
+		8E3D9B251A97BEE6009D0547 /* AddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D9B241A97BEE6009D0547 /* AddSpaceObjectViewController.m */; };
+		8E6729071A97A59A009BBEE0 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6729001A97A59A009BBEE0 /* BButton.m */; };
+		8E6729081A97A59A009BBEE0 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6729021A97A59A009BBEE0 /* NSString+FontAwesome.m */; };
+		8E6729091A97A59A009BBEE0 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6729041A97A59A009BBEE0 /* UIColor+BButton.m */; };
+		8E67290A1A97A59A009BBEE0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6729061A97A59A009BBEE0 /* FontAwesome.ttf */; };
 		8EC1753E1A7BAC5400688E3B /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1753D1A7BAC5400688E3B /* AstronomicalData.m */; };
 		8EC175AC1A83EBB100688E3B /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EC175A21A83EBB100688E3B /* Earth.jpg */; };
 		8EC175AD1A83EBB100688E3B /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EC175A31A83EBB100688E3B /* EinsteinRing.jpg */; };
@@ -55,6 +61,17 @@
 		86681AA21A6D3F7A009FBC31 /* OuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OuterSpaceTableViewController.m; sourceTree = "<group>"; };
 		8E0BAFB81A8A23FF006457BB /* SpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceImageViewController.h; sourceTree = "<group>"; };
 		8E0BAFB91A8A23FF006457BB /* SpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceImageViewController.m; sourceTree = "<group>"; };
+		8E0BB0601A8D2AE0006457BB /* SpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceDataViewController.h; sourceTree = "<group>"; };
+		8E0BB0611A8D2AE0006457BB /* SpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceDataViewController.m; sourceTree = "<group>"; };
+		8E3D9B231A97BEE6009D0547 /* AddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		8E3D9B241A97BEE6009D0547 /* AddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceObjectViewController.m; sourceTree = "<group>"; };
+		8E6728FF1A97A59A009BBEE0 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
+		8E6729001A97A59A009BBEE0 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BButton.m; sourceTree = "<group>"; };
+		8E6729011A97A59A009BBEE0 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		8E6729021A97A59A009BBEE0 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		8E6729031A97A59A009BBEE0 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
+		8E6729041A97A59A009BBEE0 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
+		8E6729061A97A59A009BBEE0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		8EC1753C1A7BAC5400688E3B /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
 		8EC1753D1A7BAC5400688E3B /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 		8EC175A21A83EBB100688E3B /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
@@ -118,6 +135,10 @@
 				8ECB5FCE1A853A1500E36DC0 /* SpaceObject.m */,
 				8E0BAFB81A8A23FF006457BB /* SpaceImageViewController.h */,
 				8E0BAFB91A8A23FF006457BB /* SpaceImageViewController.m */,
+				8E0BB0601A8D2AE0006457BB /* SpaceDataViewController.h */,
+				8E0BB0611A8D2AE0006457BB /* SpaceDataViewController.m */,
+				8E3D9B231A97BEE6009D0547 /* AddSpaceObjectViewController.h */,
+				8E3D9B241A97BEE6009D0547 /* AddSpaceObjectViewController.m */,
 				86681A851A6D3E46009FBC31 /* Main.storyboard */,
 				86681A881A6D3E46009FBC31 /* Images.xcassets */,
 				86681A8A1A6D3E46009FBC31 /* LaunchScreen.xib */,
@@ -129,6 +150,7 @@
 		86681A7B1A6D3E46009FBC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E6728FD1A97A59A009BBEE0 /* BButton */,
 				8EC175B61A83EBCA00688E3B /* Planets */,
 				8EC1753C1A7BAC5400688E3B /* AstronomicalData.h */,
 				8EC1753D1A7BAC5400688E3B /* AstronomicalData.m */,
@@ -153,6 +175,36 @@
 				86681A961A6D3E46009FBC31 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E6728FD1A97A59A009BBEE0 /* BButton */ = {
+			isa = PBXGroup;
+			children = (
+				8E6728FE1A97A59A009BBEE0 /* Classes */,
+				8E6729051A97A59A009BBEE0 /* resources */,
+			);
+			path = BButton;
+			sourceTree = "<group>";
+		};
+		8E6728FE1A97A59A009BBEE0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E6728FF1A97A59A009BBEE0 /* BButton.h */,
+				8E6729001A97A59A009BBEE0 /* BButton.m */,
+				8E6729011A97A59A009BBEE0 /* NSString+FontAwesome.h */,
+				8E6729021A97A59A009BBEE0 /* NSString+FontAwesome.m */,
+				8E6729031A97A59A009BBEE0 /* UIColor+BButton.h */,
+				8E6729041A97A59A009BBEE0 /* UIColor+BButton.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E6729051A97A59A009BBEE0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E6729061A97A59A009BBEE0 /* FontAwesome.ttf */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		8EC175B61A83EBCA00688E3B /* Planets */ = {
@@ -263,6 +315,7 @@
 				86681A8C1A6D3E46009FBC31 /* LaunchScreen.xib in Resources */,
 				86681A891A6D3E46009FBC31 /* Images.xcassets in Resources */,
 				8EC175AD1A83EBB100688E3B /* EinsteinRing.jpg in Resources */,
+				8E67290A1A97A59A009BBEE0 /* FontAwesome.ttf in Resources */,
 				8EC175AE1A83EBB100688E3B /* Jupiter.jpg in Resources */,
 				8EC175B21A83EBB100688E3B /* Orion.jpg in Resources */,
 			);
@@ -284,10 +337,15 @@
 			files = (
 				86681AA31A6D3F7A009FBC31 /* OuterSpaceTableViewController.m in Sources */,
 				86681A811A6D3E46009FBC31 /* AppDelegate.m in Sources */,
+				8E6729081A97A59A009BBEE0 /* NSString+FontAwesome.m in Sources */,
+				8E6729071A97A59A009BBEE0 /* BButton.m in Sources */,
 				86681A7E1A6D3E46009FBC31 /* main.m in Sources */,
 				8EC1753E1A7BAC5400688E3B /* AstronomicalData.m in Sources */,
 				8ECB5FCF1A853A1500E36DC0 /* SpaceObject.m in Sources */,
 				8E0BAFBA1A8A23FF006457BB /* SpaceImageViewController.m in Sources */,
+				8E6729091A97A59A009BBEE0 /* UIColor+BButton.m in Sources */,
+				8E3D9B251A97BEE6009D0547 /* AddSpaceObjectViewController.m in Sources */,
+				8E0BB0621A8D2AE0006457BB /* SpaceDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,37 +1,29 @@
 //
-//  SpaceImageViewController.m
+//  AddSpaceObjectViewController.m
 //  Out of this World
 //
-//  Created by Victor Mendonça Lellis on 2/10/15.
+//  Created by Victor Mendonça Lellis on 2/20/15.
 //  Copyright (c) 2015 Victor Lellis. All rights reserved.
 //
 
-#import "SpaceImageViewController.h"
+#import "AddSpaceObjectViewController.h"
 
+@interface AddSpaceObjectViewController ()
 
-@implementation SpaceImageViewController
+@end
+
+@implementation AddSpaceObjectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    self.imageView = [[UIImageView alloc] initWithImage:self.spaceObject.spaceImage];
-    self.scrollView.contentSize = self.imageView.frame.size;
-    [self.scrollView addSubview:self.imageView];
-    self.scrollView.delegate = self;
-    
-    self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.5;
+    UIImage *orionImage = [UIImage imageNamed:@"Orion.jpg"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:orionImage];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return self.imageView;
 }
 
 /*
@@ -44,4 +36,9 @@
 }
 */
 
+- (IBAction)cancelButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)addButtonPressed:(UIButton *)sender {
+}
 @end
