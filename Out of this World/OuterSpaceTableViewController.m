@@ -127,6 +127,7 @@
         SpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = planet.name;
         cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
     }
     else {
     
@@ -155,13 +156,21 @@
     if ([sender isKindOfClass:[UITableViewCell class]] && [segue.destinationViewController isKindOfClass:[SpaceImageViewController class]]) {
         SpaceImageViewController *nextViewController = segue.destinationViewController;
         NSIndexPath *path = [self.tableView indexPathForCell:sender];
-        SpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
+        SpaceObject *selectedObject;
+        if (path.section == 1)
+            selectedObject = [self.addedSpaceObjects objectAtIndex:path.row];
+        else
+            selectedObject = [self.planets objectAtIndex:path.row];
         nextViewController.spaceObject = selectedObject;
     }
     if ([sender isKindOfClass:[NSIndexPath class]] && [segue.destinationViewController isKindOfClass:[SpaceDataViewController class]]) {
         SpaceDataViewController *targetViewController = segue.destinationViewController;
         NSIndexPath *path = sender;
-        SpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
+        SpaceObject *selectedObject;
+        if (path.section == 1)
+            selectedObject = [self.addedSpaceObjects objectAtIndex:path.row];
+        else
+            selectedObject = [self.planets objectAtIndex:path.row];
         targetViewController.spaceObject = selectedObject;
     }
     if ([segue.destinationViewController isKindOfClass:[AddSpaceObjectViewController class]]) {
