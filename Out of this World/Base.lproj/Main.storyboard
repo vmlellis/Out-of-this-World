@@ -217,14 +217,6 @@
                                     <action selector="addButtonPressed:" destination="tqh-qd-D2K" eventType="touchUpInside" id="QLe-5R-y9G"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-IH-00R">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="288" height="30"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tw2-rP-Vc7">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -265,30 +257,38 @@
                                     <rect key="frame" x="16" y="218" width="288" height="30"/>
                                 </variation>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-IH-00R">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="288" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dBo-NI-XPW"/>
                                 <exclude reference="l5U-IH-9ef"/>
-                                <exclude reference="T3r-IH-00R"/>
                                 <exclude reference="tw2-rP-Vc7"/>
                                 <exclude reference="vT7-iT-3hK"/>
                                 <exclude reference="qAT-zm-1Qx"/>
                                 <exclude reference="nW0-Sf-LtR"/>
                                 <exclude reference="hDQ-oc-Mr1"/>
+                                <exclude reference="T3r-IH-00R"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dBo-NI-XPW"/>
                                 <include reference="l5U-IH-9ef"/>
-                                <include reference="T3r-IH-00R"/>
                                 <include reference="tw2-rP-Vc7"/>
                                 <include reference="vT7-iT-3hK"/>
                                 <include reference="qAT-zm-1Qx"/>
                                 <include reference="nW0-Sf-LtR"/>
                                 <include reference="hDQ-oc-Mr1"/>
+                                <include reference="T3r-IH-00R"/>
                             </mask>
                         </variation>
                     </view>

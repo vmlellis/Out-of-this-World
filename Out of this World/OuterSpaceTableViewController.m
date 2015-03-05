@@ -41,7 +41,7 @@
     self.planets = [[NSMutableArray alloc] init];
     
     for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
-        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
+    NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
         SpaceObject *planet = [[SpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:planet];
     }
@@ -77,6 +77,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - AddSpaceObjectViewController Delegate
+
+-(void)didCancel {
+    NSLog(@"didCancel");
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
+-(void)addSpaceObject:(SpaceObject *)spaceObject {
+    if (!self.addedSpaceObjects) {
+        self.addedSpaceObjects = [[NSMutableArray alloc] init];
+    }
+    [self.addedSpaceObjects addObject:spaceObject];
+    NSLog(@"addSpaceObject");
+    [self dismissViewControllerAnimated:true completion:nil];
+    [self.tableView reloadData];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -105,7 +123,10 @@
     
     // Configure the cell...
     if (indexPath.section == 1) {
-        
+        // Use new Space Object
+        SpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
     }
     else {
     
@@ -142,6 +163,10 @@
         NSIndexPath *path = sender;
         SpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
         targetViewController.spaceObject = selectedObject;
+    }
+    if ([segue.destinationViewController isKindOfClass:[AddSpaceObjectViewController class]]) {
+        AddSpaceObjectViewController *addObjectVC = segue.destinationViewController;
+        addObjectVC.delegate = self;
     }
 }
 
