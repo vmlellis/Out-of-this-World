@@ -14,6 +14,22 @@
 
 @implementation OuterSpaceTableViewController
 
+#pragma mark - Lazy Instantiation of Properties
+
+-(NSMutableArray *)planets {
+    if (!_planets) {
+        _planets = [[NSMutableArray alloc] init];
+    }
+    return _planets;
+}
+
+-(NSMutableArray *)addedSpaceObjects {
+    if (!_addedSpaceObjects) {
+        _addedSpaceObjects = [[NSMutableArray alloc] init];
+    }
+    return _addedSpaceObjects;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,7 +54,7 @@
 //    self.planets = [[NSMutableArray alloc] initWithObjects:@"Mercury", @"Venus", @"Earth", @"Mars", @"Jupiter",
 //                    @"Saturn", @"Uranus", @"Neptune", nil];
     
-    self.planets = [[NSMutableArray alloc] init];
+    //self.planets = [[NSMutableArray alloc] init];
     
     for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
@@ -85,9 +101,9 @@
 }
 
 -(void)addSpaceObject:(SpaceObject *)spaceObject {
-    if (!self.addedSpaceObjects) {
+    /*if (!self.addedSpaceObjects) {
         self.addedSpaceObjects = [[NSMutableArray alloc] init];
-    }
+    }*/
     [self.addedSpaceObjects addObject:spaceObject];
     NSLog(@"addSpaceObject");
     [self dismissViewControllerAnimated:true completion:nil];
